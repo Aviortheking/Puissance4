@@ -18,4 +18,8 @@ if (restartBtn) {
 game.playerColor = 'yellow'
 game.startSinglePlayer()
 
-window.dm = DOMElement
+
+const ws = new WebSocket('ws://localhost:8080')
+ws.onmessage = (event) => {
+	console.log(event.data)
+}

@@ -4,17 +4,21 @@
 	"main": "index.js",
 	"license": "MIT",
 	"dependencies": {
-		"@dzeio/dom-manager": "^1.2.2",
+		"@dzeio/dom-manager": "^1.2.3",
+		"@dzeio/listener": "^1.0.0",
 		"@types/express": "^4.17.9",
+		"@types/ws": "^7.4.0",
 		"express": "^4.17.1",
 		"nodemon": "^2.0.6",
 		"ts-node": "^9.1.1",
 		"ts-node-dev": "^1.1.1",
-		"typescript": "^4.1.3"
+		"typescript": "^4.1.3",
+		"ws": "^7.4.1"
 	},
 	"scripts": {
 		"start": "ts-node main.ts",
-		"dev-front": "parcel public/index.html",
+		"dev-front": "parcel front-src/index.html",
+		"build-front": "parcel build front-src/index.html --out-dir public",
 		"dev": "ts-node-dev main.ts"
 	},
 	"devDependencies": {

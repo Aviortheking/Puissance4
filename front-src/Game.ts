@@ -38,7 +38,7 @@ export default class Game {
 							this.onPlayerMove(cell, cellIndex)
 						}
 					})
-				cell.data('event-added', 'true')
+					cell.data('event-added', 'true')
 				}
 
 				// Put each cells in the corresponding column
@@ -75,10 +75,17 @@ export default class Game {
 		playerShower.text(player ? this.playerColor : this.playerColor === 'red' ? 'yellow' : 'red')
 		if (player) {
 			this.isWaitingForPlayerMove = true
+		} else {
+			if (this.gameType === 'single' && this.gameStarted) {
+				setTimeout(() => {
+					this.makeIATakeTurn()
+					this.setPlayerTurn(true)
+				}, getRandomInt(200, 500))
+			}
 		}
 	}
 
-	public setupMultiplayer() {}
+	public setupMultiplayer() { }
 
 	public onPlayerMove(cell: DOMElement, xPos: number) {
 		if (this.isWaitingForPlayerMove) {
@@ -87,10 +94,7 @@ export default class Game {
 				return
 			}
 			if (this.gameType === 'single' && this.gameStarted) {
-				setTimeout(() => {
-					this.makeIATakeTurn()
-					this.setPlayerTurn(true)
-				}, getRandomInt(200, 2000))
+				this.setPlayerTurn(false)
 			}
 		}
 	}

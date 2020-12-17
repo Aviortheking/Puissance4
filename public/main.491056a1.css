@@ -1,0 +1,2 @@
+body{margin:0;padding:0}.tableContainer{display:flex;align-items:center;justify-content:center;height:40rem}table{border:2px solid}td,tr{border:1px solid}td{height:10px;width:20px}td[data-color=red]{background:red}td[data-color=yellow]{background:#ff0}td[data-winner=true]{background:gold}
+/*# sourceMappingURL=/main.491056a1.css.map */
