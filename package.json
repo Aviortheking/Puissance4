@@ -1,0 +1,17 @@
+{
+  "name": "Puissance4",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "ts-node": "^9.1.1",
+    "ts-node-dev": "^1.1.1",
+    "typescript": "^4.1.3",
+    "websocket": "^1.0.33"
+  },
+  "scripts": {
+	  "start": "ts-node main.ts",
+	  "dev": "ts-node-dev main.ts"
+  }
+}
