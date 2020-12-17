@@ -34,3 +34,7 @@ td[data-color="red"] {
 td[data-color="yellow"] {
     background: yellow
 }
+
+td[data-winner="true"] {
+    background: gold
+}

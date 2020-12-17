@@ -1,6 +1,7 @@
 import './style.css'
 
 import Game from './Game'
+import { DOMElement } from '@dzeio/dom-manager'
 
 const table = document.querySelector('table')
 
@@ -9,12 +10,12 @@ if (!table) {
 }
 
 const game = new Game(table)
-game.makeMove(0, 'red')
-game.makeIATakeTurn()
-game.makeMove(0, 'red')
-game.makeMove(0, 'red')
-game.makeMove(0, 'red')
-game.makeMove(0, 'red')
-game.makeMove(0, 'red')
-game.makeMove(0, 'red')
-game.makeMove(0, 'red')
+const restartBtn = DOMElement.get('.restartBtn')
+if (restartBtn) {
+	game.setRestartButton(restartBtn)
+}
+
+game.playerColor = 'yellow'
+game.startSinglePlayer()
+
+window.dm = DOMElement

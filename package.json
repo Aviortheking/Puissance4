@@ -4,6 +4,7 @@
 	"main": "index.js",
 	"license": "MIT",
 	"dependencies": {
+		"@dzeio/dom-manager": "^1.2.2",
 		"@types/express": "^4.17.9",
 		"express": "^4.17.1",
 		"nodemon": "^2.0.6",
@@ -15,5 +16,8 @@
 		"start": "ts-node main.ts",
 		"dev-front": "parcel public/index.html",
 		"dev": "ts-node-dev main.ts"
+	},
+	"devDependencies": {
+		"parcel": "^1.12.4"
 	}
 }
