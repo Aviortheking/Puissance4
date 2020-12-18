@@ -2,71 +2,42 @@
 <html lang="fr">
 
 	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Puissance 4</title>
 	</head>
 
 	<body>
-		<div>Tour du joueur <span class="playerColor"></span></div>
-		<button class="restartBtn">Recommencer</button>
+		<h1>Puissance 4</h1>
+
+		<div class="chooseSetup">
+			<button class="vsAI">Jouer contre une IA</button>
+			<button class="vsPlayer">Jouer contre un joueur en ligne</button>
+		</div>
+		<div id="usermessage" style="display: none">Donnez ce code au deuxieme joueur</div>
+
+		<div class="playerOption" style="display: none">
+
+			<button class="createSession">Créer une Session</button>
+			<input type="number" id="sessionID" required min="100" max="999" />
+			<button class="joinSession">Rejoindre une Session</button>
+			<button id="backInMenu">retour au menu</button>
+		</div>
+		<div class="giveUp" style="display: none">
+			<button class="restartBtn">Arrêter</button>
+			<button class="continueBtn" style="display:none">Nouvelle Manche</button>
+		</div>
 		<div class="tableContainer">
 			<table>
-				<tr>
-					<td>1</td>
-					<td>1</td>
-					<td>1</td>
-					<td>1</td>
-					<td>1</td>
-					<td>1</td>
-					<td>1</td>
-				</tr>
-				<tr>
-					<td>2</td>
-					<td>2</td>
-					<td>2</td>
-					<td>2</td>
-					<td>2</td>
-					<td>2</td>
-					<td>2</td>
-				</tr>
-				<tr>
-					<td>3</td>
-					<td>3</td>
-					<td>3</td>
-					<td>3</td>
-					<td>3</td>
-					<td>3</td>
-					<td>3</td>
-				</tr>
-				<tr>
-					<td>4</td>
-					<td>4</td>
-					<td>4</td>
-					<td>4</td>
-					<td>4</td>
-					<td>4</td>
-					<td>4</td>
-				</tr>
-				<tr>
-					<td>5</td>
-					<td>5</td>
-					<td>5</td>
-					<td>5</td>
-					<td>5</td>
-					<td>5</td>
-					<td>5</td>
-				</tr>
-				<tr>
-					<td>6</td>
-					<td>6</td>
-					<td>6</td>
-					<td>6</td>
-					<td>6</td>
-					<td>6</td>
-					<td>6</td>
-				</tr>
 			</table>
+
+		</div>
+		<div class="stateOfGame">
+			<div class="victoire"></div>
+			<div>Tour du joueur <span class="playerColor"></span></div>
+			<div>Vos points <span class="j1p">0</span></div>
+			<div>Points Adversaire <span class="j2p">0</span></div>
+
 		</div>
 	</body>
 	<script src="./main.ts"></script>

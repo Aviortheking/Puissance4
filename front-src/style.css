@@ -8,12 +8,25 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 40rem;
 }
 
 table {
+    height: 45rem;
     border: 2px solid;
+    margin-top: 10rem;
+}
 
+.chooseSetup,
+.playerOption,
+.giveUp {
+    display: flex;
+    justify-content: center;
+
+}
+
+
+h1 {
+    text-align: center;
 }
 
 tr {
@@ -21,10 +34,19 @@ tr {
     border: 1px solid;
 }
 
+#usermessage {
+    text-align: center;
+}
+
+#backInMenu {
+    display: none
+}
+
 td {
+    border-radius: 100%;
     border: 1px solid;
-    height: 10px;
-    width: 20px;
+    height: 7rem;
+    width: 7rem;
 }
 
 td[data-color="red"] {
@@ -37,4 +59,12 @@ td[data-color="yellow"] {
 
 td[data-winner="true"] {
     background: gold
+}
+
+.stateOfGame {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10rem;
+    flex-direction: column;
 }
